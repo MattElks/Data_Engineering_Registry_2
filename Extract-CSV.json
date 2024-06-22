@@ -175,7 +175,7 @@
             "y" : 160.0
           },
           "properties" : {
-            "filename" : "people_extracts_gh.csv",
+            "filename" : "people_extracts.csv",
             "Store State" : "Do not store state",
             "canonical-value-lookup-cache-size" : "100"
           },
