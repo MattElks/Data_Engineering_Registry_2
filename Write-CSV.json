@@ -1,0 +1,172 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "32699c2b-a7be-36fd-a41b-c031bf8a3abe",
+            "id" : "baf09cfa-9bb0-3d13-a545-8e8ebf17f707",
+            "instanceIdentifier" : "2a6f5c34-0190-1000-30f6-7fcecd77060d",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "32699c2b-a7be-36fd-a41b-c031bf8a3abe",
+          "identifier" : "741438d8-d8d9-304b-89b0-bf084b74c20d",
+          "instanceIdentifier" : "2a70242b-0190-1000-f648-2f0560044fd8",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "32699c2b-a7be-36fd-a41b-c031bf8a3abe",
+            "id" : "da12f12e-7da0-35db-a8ae-f5efe4606067",
+            "instanceIdentifier" : "2a572267-0190-1000-ecac-8130b574f4cc",
+            "name" : "CSV_File_In",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "32699c2b-a7be-36fd-a41b-c031bf8a3abe",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "32699c2b-a7be-36fd-a41b-c031bf8a3abe",
+          "identifier" : "da12f12e-7da0-35db-a8ae-f5efe4606067",
+          "instanceIdentifier" : "2a572267-0190-1000-ecac-8130b574f4cc",
+          "name" : "CSV_File_In",
+          "position" : {
+            "x" : 456.0,
+            "y" : 248.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "instanceIdentifier" : "2a56ad79-0190-1000-90e8-224c1508fdd7",
+        "labels" : [ ],
+        "name" : "Write_CSV_File",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : -216.0,
+          "y" : -312.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "success", "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.25.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "32699c2b-a7be-36fd-a41b-c031bf8a3abe",
+          "identifier" : "baf09cfa-9bb0-3d13-a545-8e8ebf17f707",
+          "instanceIdentifier" : "2a6f5c34-0190-1000-30f6-7fcecd77060d",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "PutFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 952.0,
+            "y" : 200.0
+          },
+          "properties" : {
+            "Create Missing Directories" : "true",
+            "Directory" : "/home/mattelks/peoplepipeline/",
+            "Conflict Resolution Strategy" : "fail"
+          },
+          "propertyDescriptors" : {
+            "Group" : {
+              "displayName" : "Group",
+              "identifiesControllerService" : false,
+              "name" : "Group",
+              "sensitive" : false
+            },
+            "Owner" : {
+              "displayName" : "Owner",
+              "identifiesControllerService" : false,
+              "name" : "Owner",
+              "sensitive" : false
+            },
+            "Create Missing Directories" : {
+              "displayName" : "Create Missing Directories",
+              "identifiesControllerService" : false,
+              "name" : "Create Missing Directories",
+              "sensitive" : false
+            },
+            "Permissions" : {
+              "displayName" : "Permissions",
+              "identifiesControllerService" : false,
+              "name" : "Permissions",
+              "sensitive" : false
+            },
+            "Maximum File Count" : {
+              "displayName" : "Maximum File Count",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Count",
+              "sensitive" : false
+            },
+            "Last Modified Time" : {
+              "displayName" : "Last Modified Time",
+              "identifiesControllerService" : false,
+              "name" : "Last Modified Time",
+              "sensitive" : false
+            },
+            "Directory" : {
+              "displayName" : "Directory",
+              "identifiesControllerService" : false,
+              "name" : "Directory",
+              "sensitive" : false
+            },
+            "Conflict Resolution Strategy" : {
+              "displayName" : "Conflict Resolution Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Conflict Resolution Strategy",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutFile",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { },
+      "parameterProviders" : { }
+    }
+  }
+}
